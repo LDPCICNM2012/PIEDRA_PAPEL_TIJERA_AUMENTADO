@@ -8,4 +8,4 @@ pymsbox
 pygame
 
 
-los minijuegos no los he hecho yo. los creditos estan en el codigo
+los minijuegos no los he hecho yo. los creditos estan en el codigp
