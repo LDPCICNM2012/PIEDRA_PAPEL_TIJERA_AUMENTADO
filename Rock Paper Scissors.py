@@ -8,6 +8,7 @@ from os import system
 from _thread import start_new_thread        #TODO ESTO ES PARA EL SECRETO..........
 from time import sleep
 from server import main
+import tkinter as tk
 #Importamos random y time
 
 
@@ -345,6 +346,52 @@ while not Fin_Juego:
             sleep(0.1)
 
         break
+
+
+    elif decision_inicial == "cookie clicker":
+        cookie = 0
+        def clear():
+            global cookie
+            cookie = 0
+            label.config(text=f"{cookie} Cookies")
+        def add():
+            global cookie
+            cookie += 1
+            label.config(text=f"{cookie} Cookies")
+        def substract():
+            global cookie
+            if cookie <=0:
+                cookie = cookie
+            else:
+                cookie -= 1
+            label.config(text=f"{cookie} Cookies")
+        root = tk.Tk()
+
+        root.geometry("510x430")
+        root.title("Cookie Clicker")
+        root.config(bg="peru")
+        label = tk.Label(root, text="~ COOKIE CLICKER ~", font=("Comic Sans MS", 32))
+        label.pack(pady=20)
+
+        label = tk.Label(root, text=f"{cookie}", font=("Arial", 32))
+        label.pack(pady=20)
+        button = tk.Button(root, text="Click Cookie", command=add)
+        button.pack()
+        button = tk.Button(root, text="Eat Cookies", command=substract)
+        button.pack()
+        button = tk.Button(root, text="Clear Cookie", command=clear)
+        button.pack()
+        root.mainloop()
+
+        break
+    
+
+    elif decision_inicial == "javier":
+        print("HONORABLE MENTION JAVIER")
+        time.sleep(2)
+        print("NIGGA")
+        break
+        
 
 
 time.sleep(1)
